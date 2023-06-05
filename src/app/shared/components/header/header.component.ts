@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  showSubMenu = false;
+  showAltMenu = false;
 
+  toggleSubMenu(): void {
+    this.showSubMenu = !this.showSubMenu;
+  }
+
+  toggleAltMenu(): void {
+    this.showAltMenu = !this.showAltMenu;
+  }
 }
