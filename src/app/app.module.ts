@@ -3,20 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/components/header/header.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
 import { InscriptionComponent } from './views/inscription/inscription.component';
 import { AccueilComponent } from './views/accueil/accueil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from "@angular/material/menu";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatLegacyButtonModule} from "@angular/material/legacy-button";
+import {SharedModule} from "./shared/modules/shared.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     InscriptionComponent,
     AccueilComponent
   ],
@@ -26,9 +23,12 @@ import {MatLegacyButtonModule} from "@angular/material/legacy-button";
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
-    MatLegacyButtonModule
+    MatLegacyButtonModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

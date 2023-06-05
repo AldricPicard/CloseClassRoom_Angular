@@ -8,7 +8,6 @@ import { NgModule } from '@angular/core';
 import { FooterComponent } from '../components/footer/footer.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { AppRoutingModule } from './app.routing.modules';
-import {BarreDeNavigationComponent} from "../components/barre-de-navigation/barre-de-navigation.component";
 
 const AngularModules = [
   CommonModule,
@@ -25,8 +24,7 @@ const AngularModules = [
   declarations: [
     // Déclarations des modules commun à tous les modules
     HeaderComponent,
-    FooterComponent,
-    BarreDeNavigationComponent
+    FooterComponent
   ],
   imports: [AngularModules,
   ],
@@ -34,7 +32,6 @@ const AngularModules = [
     // Exportation des modules pour les rendre accessibles aux autres modules
     HeaderComponent,
     FooterComponent,
-    BarreDeNavigationComponent,
     AngularModules
   ],
   providers: [],
