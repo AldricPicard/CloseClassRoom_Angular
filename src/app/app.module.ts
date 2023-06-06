@@ -20,6 +20,8 @@ import { FormationComponent } from './views/formation/formation.component';
 import { AlternanceComponent } from './views/alternance/alternance.component';
 import { FinancementComponent } from './views/financement/financement.component';
 import { EntrepriseComponent } from './views/entreprise/entreprise.component';
+import { PartenaireComponent } from './views/accueil/partenaire/partenaire.component';
+import { CommentaireComponent } from './views/accueil/commentaire/commentaire.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { EntrepriseComponent } from './views/entreprise/entreprise.component';
     AlternanceComponent,
     FinancementComponent,
     EntrepriseComponent,
+    PartenaireComponent,
+    CommentaireComponent,
   ],
   imports: [
     BrowserModule,
