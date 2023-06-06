@@ -9,6 +9,7 @@ import {FormationComponent} from "../../views/formation/formation.component";
 import {AlternanceComponent} from "../../views/alternance/alternance.component";
 import {FinancementComponent} from "../../views/financement/financement.component";
 import {EntrepriseComponent} from "../../views/entreprise/entreprise.component";
+import {ResetmdpComponent} from "../../views/resetmdp/resetmdp.component";
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'alternance', component: AlternanceComponent},
   { path: 'financement', component: FinancementComponent},
   { path: 'entreprise', component: EntrepriseComponent},
+  { path: 'resetmdp', component: ResetmdpComponent}
 ];
 
 

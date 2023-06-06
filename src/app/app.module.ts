@@ -20,6 +20,8 @@ import { FormationComponent } from './views/formation/formation.component';
 import { AlternanceComponent } from './views/alternance/alternance.component';
 import { FinancementComponent } from './views/financement/financement.component';
 import { EntrepriseComponent } from './views/entreprise/entreprise.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { ResetmdpComponent } from './views/resetmdp/resetmdp.component';
 
 @NgModule({
   declarations: [
@@ -36,10 +38,12 @@ import { EntrepriseComponent } from './views/entreprise/entreprise.component';
     AlternanceComponent,
     FinancementComponent,
     EntrepriseComponent,
+    ResetmdpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
