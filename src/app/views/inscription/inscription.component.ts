@@ -24,9 +24,9 @@ export class InscriptionComponent {
         {
           // Renvoie les sexe de l'utilisateur en fonction de la valeur du bouton radio
           sexe: value.sexe,
-          firstName: value.firstName,
-          lastName: value.lastName,
-          date_birth: value.date_birth,
+          firstname: value.firstname,
+          lastname: value.lastname,
+          birth: value.birth,
           email: value.email,
           phone: value.phone,
           password: value.password,

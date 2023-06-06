@@ -9,9 +9,9 @@ export interface User {
   date_creation: string;
   date_update: string;
   description: string;
-  date_birth: string;
+  birth: string;
   address: string;
   city: string;
-  departement: string;
+  department: string;
   postal_code: string;
 }

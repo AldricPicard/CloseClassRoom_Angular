@@ -18,6 +18,13 @@ export class ConnexionComponent {
   }
 
   connexion(value: any) {
-   // this.authentificationService.signIn({email: value.email, password: value.password});
+    // Vérification des données dans la base de données du mail et du mot de passe pour se connecter
+    this.http.post('http://localhost:3000/api/users',
+      {email: value.email, password: value.password}).subscribe((res: any) => {
+        console.log('Vous êtes connecté.');
+      }, (error) => {
+        console.log('Erreur lors de la connexion.');
+      }
+    );
   }
 }
