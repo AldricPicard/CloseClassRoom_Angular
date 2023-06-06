@@ -7,7 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { FooterComponent } from '../components/footer/footer.component';
 import { HeaderComponent } from '../components/header/header.component';
-import { AppRoutingModule } from './app.routing.modules';
+import {AppRoutingModules} from "./app.routing.modules";
+import {AppRoutingModule} from "../../app-routing.module";
 
 const AngularModules = [
   CommonModule,
@@ -17,7 +18,8 @@ const AngularModules = [
   RouterModule,
   FormsModule,
   ReactiveFormsModule,
-  AppRoutingModule
+  AppRoutingModules,
+  AppRoutingModule,
 ];
 
 @NgModule({

@@ -14,6 +14,12 @@ import { ConnexionComponent } from './views/connexion/connexion.component';
 import { HeroSectionComponent } from './views/accueil/hero-section/hero-section.component';
 import { DescriptionComponent } from './views/accueil/description/description.component';
 import { MentorComponent } from './views/accueil/mentor/mentor.component';
+import { MentionsComponent } from './shared/components/mention/mentions.component';
+import { PolitiqueComponent } from './shared/components/politique/politique.component';
+import { FormationComponent } from './views/formation/formation.component';
+import { AlternanceComponent } from './views/alternance/alternance.component';
+import { FinancementComponent } from './views/financement/financement.component';
+import { EntrepriseComponent } from './views/entreprise/entreprise.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +30,12 @@ import { MentorComponent } from './views/accueil/mentor/mentor.component';
     HeroSectionComponent,
     DescriptionComponent,
     MentorComponent,
+    MentionsComponent,
+    PolitiqueComponent,
+    FormationComponent,
+    AlternanceComponent,
+    FinancementComponent,
+    EntrepriseComponent,
   ],
   imports: [
     BrowserModule,
