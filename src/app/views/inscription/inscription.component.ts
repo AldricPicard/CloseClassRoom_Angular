@@ -2,6 +2,7 @@ import {Component, Inject} from '@angular/core';
 import {Observable} from "rxjs";
 import {User} from "../../shared/models/user";
 import {HttpClient} from "@angular/common/http";
+import * as CryptoJS from 'crypto-js';
 
 
 @Component({
@@ -29,7 +30,7 @@ export class InscriptionComponent {
           birth: value.birth,
           email: value.email,
           phone: value.phone,
-          password: value.password,
+          password: CryptoJS.SHA256(value.password).toString(),
           address: value.address,
           city: value.city,
           department: value.department,
