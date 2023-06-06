@@ -12,6 +12,8 @@ import {MatLegacyButtonModule} from "@angular/material/legacy-button";
 import {SharedModule} from "./shared/modules/shared.module";
 import { ConnexionComponent } from './views/connexion/connexion.component';
 import { HeroSectionComponent } from './views/accueil/hero-section/hero-section.component';
+import { DescriptionComponent } from './views/accueil/description/description.component';
+import { MentorComponent } from './views/accueil/mentor/mentor.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { HeroSectionComponent } from './views/accueil/hero-section/hero-section.
     AccueilComponent,
     ConnexionComponent,
     HeroSectionComponent,
+    DescriptionComponent,
+    MentorComponent,
   ],
   imports: [
     BrowserModule,
