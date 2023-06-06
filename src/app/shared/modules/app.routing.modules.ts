@@ -7,7 +7,7 @@ import { ConnexionComponent } from "src/app/views/connexion/connexion.component"
 
 
 const routes: Routes = [
-  { path: '', component: AccueilComponent, canActivate: [LocationGuardService] },
+  { path: '', redirectTo: '/accueil', pathMatch: 'full' },
   { path: 'accueil', component: AccueilComponent },
   { path: 'inscription', component: InscriptionComponent},
   { path: 'connexion', component: ConnexionComponent}
