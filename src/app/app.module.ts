@@ -20,8 +20,13 @@ import { FormationComponent } from './views/formation/formation.component';
 import { AlternanceComponent } from './views/alternance/alternance.component';
 import { FinancementComponent } from './views/financement/financement.component';
 import { EntrepriseComponent } from './views/entreprise/entreprise.component';
+<<<<<<< HEAD
+import { PartenaireComponent } from './views/accueil/partenaire/partenaire.component';
+import { CommentaireComponent } from './views/accueil/commentaire/commentaire.component';
+=======
 import {ReactiveFormsModule} from "@angular/forms";
 import { ResetmdpComponent } from './views/resetmdp/resetmdp.component';
+>>>>>>> 9c0215429bb969bc424a8472b4342758d7237393
 
 @NgModule({
   declarations: [
@@ -38,7 +43,12 @@ import { ResetmdpComponent } from './views/resetmdp/resetmdp.component';
     AlternanceComponent,
     FinancementComponent,
     EntrepriseComponent,
+<<<<<<< HEAD
+    PartenaireComponent,
+    CommentaireComponent,
+=======
     ResetmdpComponent,
+>>>>>>> 9c0215429bb969bc424a8472b4342758d7237393
   ],
   imports: [
     BrowserModule,

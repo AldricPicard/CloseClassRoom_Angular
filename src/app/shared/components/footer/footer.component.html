@@ -1,4 +1,20 @@
-<div id="copy">© 2023 - Tous droits réservés</div>
-<div id="mention"><a routerLink="mentions">Mentions Légales</a></div>
-<div id="politique"><a routerLink="politique">Politique de confidentialité</a></div>
+<div class="space-y-12">
+  <div class="border-t border-gray-900/10 pb-12 pt-12">
+    <div class="flex justify-between pr-10 pl-10">
+      <div class="flex justify-around">
+        <p class="mr-3">© 2023 - Tous droits réservés</p>
+        <a [routerLink]="['/mention']" class="mr-3 text-gray-900 hover:text-gray-500">Mentions légales</a>
+        <a [routerLink]="['/confidentialité']" class="mr-3 text-gray-900 hover:text-gray-500" >Politique de confidentialité</a>
+      </div>
+      <div class="flex justify-around gap-5">
+        <a href=""><img src="./assets/image/linkedin-logo.png" alt="" class="w-8"></a>
+        <a href=""><img src="./assets/image/logo-twitter.png" alt="" class="w-8"></a>
+        <a href=""><img src="./assets/image/youtube-play.png" alt="" class="w-8"></a>
+        <a href=""><img src="./assets/image/linkedin-logo.png" alt="" class="w-8"></a>
+        <a href=""><img src="./assets/image/linkedin-logo.png" alt="" class="w-8"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
