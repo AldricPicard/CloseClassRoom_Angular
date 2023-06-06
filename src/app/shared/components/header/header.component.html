@@ -1,33 +1,17 @@
-<!-- Pour Jonathan -->
-<a routerLink="inscription">Inscription</a>
-
-
-<div id="tout">
-  <div id="logo">
-    <span>CLOSE</span>CLASSROOMS
-  </div>
-  <!-- notre barre de navigation -->
-  <nav>
-    <ul>
-      <li class="dropdown">
-        <a href="#">Formations <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg></a>
-
-      </li>
-      <li class="dropdown">
-        <a href="#">Alternance <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg></a>
-
-      </li>
-      <li><a href="#">Financement</a></li>
-      <li><a href="#">Pour les entreprises</a></li>
-    </ul>
+<header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="text-3xl font-bold text-teal-600">CloseClassRoom</a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a [routerLink]="['/formation']" routerLinkActive="router-link-active"  class="text-sm font-semibold leading-6 text-gray-900">Formation</a>
+      <a [routerLink]="['/alternance']" routerLinkActive="router-link-active"  class="text-sm font-semibold leading-6 text-gray-900">Alternance</a>
+      <a [routerLink]="['/financement']" routerLinkActive="router-link-active"  class="text-sm font-semibold leading-6 text-gray-900">Financement</a>
+      <a [routerLink]="['/entreprise']" routerLinkActive="router-link-active"  class="text-sm font-semibold leading-6 text-gray-900">Pour les entreprises</a>
+    </div>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a [routerLink]="['/inscription']" routerLinkActive="router-link-active"  class="text-sm font-semibold leading-6 text-gray-900 mr-6">Créer un compte</a>
+      <a [routerLink]="['/connexion']" routerLinkActive="router-link-active"  class="text-sm font-semibold leading-6 text-gray-900">Connexion</a>
+    </div>
   </nav>
-
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-  </svg>
-  <button type="button" name="button">CONNEXION</button>
-</div>
+</header>

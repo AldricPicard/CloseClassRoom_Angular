@@ -10,12 +10,16 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatLegacyButtonModule} from "@angular/material/legacy-button";
 import {SharedModule} from "./shared/modules/shared.module";
+import { ConnexionComponent } from './views/connexion/connexion.component';
+import { HeroSectionComponent } from './views/accueil/hero-section/hero-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InscriptionComponent,
-    AccueilComponent
+    AccueilComponent,
+    ConnexionComponent,
+    HeroSectionComponent,
   ],
   imports: [
     BrowserModule,
