@@ -13,10 +13,10 @@
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <a [routerLink]="['/inscription']" class="text-base font-semibold leading-6 text-gray-900 mr-6 hover:opacity-70">Créer un compte</a>
       <a [routerLink]="['/connexion']" class="text-base font-semibold leading-6 text-teal-600 hover:text-teal-500">Connexion</a>
-      </div>
-      <div *ngIf="estConnecte">
-        <button class="bouton_deconnexion" (click)="logout()">Déconnexion</button>
-      </div>
+    </div>
+    </div>
+    <div *ngIf="estConnecte">
+      <button class="hidden lg:flex lg:flex-1 lg:justify-end" (click)="logout()">Déconnexion</button>
     </div>
   </nav>
 </header>

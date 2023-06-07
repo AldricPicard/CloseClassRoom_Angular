@@ -21,5 +21,6 @@ export class ConnexionComponent {
 
   connexion(value: any) {
     this.authentificationService.signIn({email: value.email, password: value.password});
+    console.log("user connect")
   }
 }
