@@ -15,7 +15,7 @@ export class ConnexionComponent {
     // Injection des dépendances
     @Inject(AuthentificationService) private authentificationService:AuthentificationService,
     @Inject(HttpClient) private http:HttpClient) {
-    this.appelAPI$ = this.http.get<User>('https://127.0.0.1:8000/api/utilisateurs.json')
+    this.appelAPI$ = this.http.get<User>('https://127.0.0.1:8000/api/users.json')
   }
 
 

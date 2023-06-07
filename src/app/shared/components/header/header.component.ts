@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Inject} from '@angular/core';
+import {Observable} from "rxjs";
+import {AuthentificationService} from "../../../../services/authentification.service";
 
 @Component({
   selector: 'app-header',
@@ -6,14 +8,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  showSubMenu = false;
-  showAltMenu = false;
+  public estConnecte: boolean = false;
+  public observableEventConnexion$ : Observable<any>;
 
-  toggleSubMenu(): void {
-    this.showSubMenu = !this.showSubMenu;
+  constructor(
+    // Injection de dépendances :
+    @Inject(AuthentificationService) private authentificationService:AuthentificationService,
+  ) {
+    // On vérifie si l'utilisateur est connecté :
+    this.estConnecte = this.authentificationService.isLoggedIn();
+    // L'observable écoute le service d'authentification. (la variable eventConnexion)
+    this.observableEventConnexion$ = this.authentificationService.eventConnexion;
+    // (Ecoute) On souscrit à l'observable pour mettre à jour la variable estConnecte à chaque fois qu'il emet.
+    this.authentificationService.eventConnexion.subscribe(
+      (signal: boolean) => {
+        this.estConnecte = signal;
+        // Le signal est connecté.
+      }
+    )
   }
 
-  toggleAltMenu(): void {
-    this.showAltMenu = !this.showAltMenu;
+  // Méthode qui permet de se déconnecter qui appel la methode doLogout du service d'authentification et qui vérifie si l'utilisateur est connecté ou non.
+  logout() {
+    this.authentificationService.doLogout();
+    this.estConnecte = this.authentificationService.isLoggedIn();
   }
+
 }
