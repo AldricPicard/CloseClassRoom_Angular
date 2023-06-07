@@ -4,7 +4,6 @@ import {User} from "../../shared/models/user";
 import {HttpClient} from "@angular/common/http";
 import { DatePipe } from '@angular/common';
 
-
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.component.html',
