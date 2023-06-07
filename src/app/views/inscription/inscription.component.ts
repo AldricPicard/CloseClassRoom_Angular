@@ -3,6 +3,7 @@ import {Observable} from "rxjs";
 import {User} from "../../shared/models/user";
 import {HttpClient} from "@angular/common/http";
 import { DatePipe } from '@angular/common';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-inscription',
@@ -14,7 +15,8 @@ export class InscriptionComponent {
 
   constructor( // Injection des dépendances
                @Inject(HttpClient) private http: HttpClient,
-               private datePipe: DatePipe
+               private datePipe: DatePipe,
+                private router : Router
                ) {
     this.user$ = this.http.get<User[]>('https://127.0.0.1:8000/api/users.json')
     }
@@ -41,6 +43,9 @@ export class InscriptionComponent {
       ).subscribe(
         () => {
           console.log('Utilisateur ajouté');
+          this.router.navigate(['/connexion']);
+
+
         }
       )
     }
