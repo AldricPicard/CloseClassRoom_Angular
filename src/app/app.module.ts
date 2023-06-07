@@ -24,7 +24,7 @@ import { PartenaireComponent } from './views/accueil/partenaire/partenaire.compo
 import { CommentaireComponent } from './views/accueil/commentaire/commentaire.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { ResetmdpComponent } from './views/resetmdp/resetmdp.component';
-
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -59,7 +59,7 @@ import { ResetmdpComponent } from './views/resetmdp/resetmdp.component';
     SharedModule
   ],
   providers: [
-
+    DatePipe,
   ],
   bootstrap: [AppComponent]
 })
