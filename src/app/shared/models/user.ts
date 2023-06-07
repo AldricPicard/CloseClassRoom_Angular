@@ -6,12 +6,12 @@ export interface User {
   roles: string[];
   password: string;
   phone: string;
-  date_creation: string;
-  date_update: string;
+  createAt: string;
+  updateAt: string;
   description: string;
   birth: string;
   address: string;
   city: string;
   department: string;
-  postal_code: string;
+  postalCode: string;
 }
