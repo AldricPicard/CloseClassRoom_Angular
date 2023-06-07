@@ -34,7 +34,7 @@ export class InscriptionComponent {
           address: value.address,
           city: value.city,
           department: value.department,
-          postal_code: value.postal_code,
+          postalCode: value.postalCode,
         }
       ).subscribe(
         () => {
