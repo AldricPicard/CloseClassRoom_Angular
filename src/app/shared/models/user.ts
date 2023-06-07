@@ -15,3 +15,8 @@ export interface User {
   department: string;
   postalCode: string;
 }
+
+export interface Login {
+  email: string;
+  password: string;
+}
