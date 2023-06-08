@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,7 +25,11 @@ import { CommentaireComponent } from './views/accueil/commentaire/commentaire.co
 import {ReactiveFormsModule} from "@angular/forms";
 import { ResetmdpComponent } from './views/resetmdp/resetmdp.component';
 import { DatePipe } from '@angular/common';
+import {AppResource} from "./app.resource";
 
+export function initResources(resource: AppResource) {
+  return () => resource.load();
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +64,15 @@ import { DatePipe } from '@angular/common';
   ],
   providers: [
     DatePipe,
+    // Ajout de app ressource
+    AppResource,
+    // Au démérage de l'application tu vas charger le fichier JSON dans l'application.
+    // APP_INITIALIZER est un token qui permet de définir une fonction qui sera exécutée au démarrage de l'application.
+    // useFactory : initResources : c'est la fonction qui sera exécutée au démarrage de l'application.
+    // deps : [AppResource] : c'est la dépendance de la fonction initResources.
+    // multi : true : permet de dire que l'on peut avoir plusieurs fonctions qui seront exécutées au démarrage de l'application.
+    { provide: APP_INITIALIZER, useFactory : initResources, deps : [AppResource], multi : true }
+
   ],
   bootstrap: [AppComponent]
 })

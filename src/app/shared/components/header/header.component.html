@@ -1,23 +1,24 @@
 <header class="bg-white -z-50">
   <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
-      <a routerLink="/" class="text-3xl font-bold text-teal-600 hover:opacity-80">CloseClassRoom</a>
+      <a routerLink="/" class="text-3xl font-bold text-teal-600 hover:opacity-80">{{resource.global.logo}}</a>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a routerLink="/formation" class="text-base font-semibold leading-6 text-gray-900 hover:opacity-70">Formation</a>
-      <a routerLink="/alternance" class="text-base font-semibold leading-6 text-gray-900 hover:opacity-70">Alternance</a>
-      <a routerLink="'/financement" class="text-base font-semibold leading-6 text-gray-900 hover:opacity-70">Financement</a>
-      <a routerLink="/entreprise" class="text-base font-semibold leading-6 text-gray-900 hover:opacity-70">Pour les entreprises</a>
+      <a (click)="goTo('formation')" class="text-base font-semibold leading-6 text-gray-900 hover:opacity-70">{{resource.global.formation}}</a>
+      <a (click)="goTo('alternance')" class="text-base font-semibold leading-6 text-gray-900 hover:opacity-70">{{header.alternation}}</a>
+      <a (click)="goTo('financement')" class="text-base font-semibold leading-6 text-gray-900 hover:opacity-70">{{header.financing}}</a>
+      <a (click)="goTo('entreprise')" class="text-base font-semibold leading-6 text-gray-900 hover:opacity-70">{{header.companies}}</a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <div *ngIf="!estConnecte">
-        <a routerLink="/inscription" class="text-base font-semibold leading-6 text-gray-900 mr-6 hover:opacity-70">Créer un compte</a>
-        <a routerLink="/connexion" class="text-base font-semibold leading-6 text-teal-600 hover:text-teal-500">Connexion</a>
+        <a (click)="goTo('inscription')" class="text-base font-semibold leading-6 text-gray-900 mr-6 hover:opacity-70">{{header.createAccount}}</a>
+        <a (click)="goTo('connexion')" class="text-base font-semibold leading-6 text-teal-600 hover:text-teal-500">{{header.connexion}}</a>
       </div>
     </div>
 
     <!--TODO: faire en sorte d'avoir le nom prenom du user -->
     <div *ngIf="estConnecte">
+
       <button class="hidden lg:flex lg:flex-1 lg:justify-end" (click)="logout()">Déconnexion</button>
     </div>
   </nav>

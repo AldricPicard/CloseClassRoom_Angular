@@ -1,12 +1,30 @@
 {
   "FR" : {
 
+    "copyright" : "© Copyright 2023 - Tous droits réservés.",
+    "legalNotice" : "Mentions légales",
+    "privacyPolicy" : "Politique de confidentialité",
+
+    "alternation" : "Alternance",
+    "financing" : "Financement",
+    "companies" : "Pour les entreprises",
+    "createAccount" : "Créer un compte",
+    "connexion" : "Connexion"
   },
   "EN" : {
+    "copyright" : "© 2023 - All rights reserved.",
+    "legalNotice" : "Legal notice",
+    "privacyPolicy" : "Privacy policy",
 
+    "alternation" : "Alternation",
+    "financing" : "financing",
+    "companies" : "For companies",
+    "createAccount" : "Create an account",
+    "connexion" : "connection"
   },
   "global" : {
-
+    "logo" : "CloseClassRoom",
+    "formation" : "Formation"
   }
 }
 

@@ -10,20 +10,21 @@ import {AlternanceComponent} from "../../views/alternance/alternance.component";
 import {FinancementComponent} from "../../views/financement/financement.component";
 import {EntrepriseComponent} from "../../views/entreprise/entreprise.component";
 import {ResetmdpComponent} from "../../views/resetmdp/resetmdp.component";
+import {LocationGuardService} from "../guards/location-guard.service";
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/accueil', pathMatch: 'full' },
-  { path: 'accueil', component: AccueilComponent },
-  { path: 'inscription', component: InscriptionComponent},
-  { path: 'connexion', component: ConnexionComponent},
-  { path: 'mentions' , component: MentionsComponent},
-  { path: 'politique' , component: PolitiqueComponent},
-  { path: 'formation', component: FormationComponent},
-  { path: 'alternance', component: AlternanceComponent},
-  { path: 'financement', component: FinancementComponent},
-  { path: 'entreprise', component: EntrepriseComponent},
-  { path: 'resetmdp', component: ResetmdpComponent}
+  { path: '', component: AccueilComponent, canActivate: [LocationGuardService] },
+  { path: ':loc/accueil', component: AccueilComponent },
+  { path: ':loc/inscription', component: InscriptionComponent},
+  { path: ':loc/connexion', component: ConnexionComponent},
+  { path: ':loc/mentions' , component: MentionsComponent},
+  { path: ':loc/politique' , component: PolitiqueComponent},
+  { path: ':loc/formation', component: FormationComponent},
+  { path: ':loc/alternance', component: AlternanceComponent},
+  { path: ':loc/financement', component: FinancementComponent},
+  { path: ':loc/entreprise', component: EntrepriseComponent},
+  { path: ':loc/resetmdp', component: ResetmdpComponent}
 ];
 
 
